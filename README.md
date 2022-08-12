@@ -5,6 +5,13 @@ text scanner for parsing in fortran
 check [scanner.f90](src/scanner.f90) for docs and [main.f90](app/main.f90) for implementation that replaces spaces for tab indentation and removes excessive spaces from source files 
 
 ## build
+
+Add to fpm.toml:
+```
+[dependencies]
+scanner.git = "https://github.com/freevryheid/scanner"
+```
+
 fpm build
 
 ## test
