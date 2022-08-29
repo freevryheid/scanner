@@ -9,10 +9,10 @@ module utils
 
 	implicit none
 
-  type :: cmd
-    character(:), allocatable :: fin
-    integer :: spt
-  end type
+	type :: cmd
+		character(:), allocatable :: fin
+		integer :: spt
+	end type
 
 	private
 	public cmd
