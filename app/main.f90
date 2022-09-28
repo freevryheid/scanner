@@ -7,9 +7,9 @@ program main
 
 	implicit none
 
-  type(cmd) :: args
-	type(string_type) :: string
-	integer :: u, iostat, ln
+	type(cmd)                 :: args
+	type(string_type)         :: string
+	integer                   :: u, iostat, ln
 	character(:), allocatable :: str
 
 	args = get_args()
@@ -19,10 +19,10 @@ program main
 	ln = 0
 	do while (iostat.eq.0)
 		call getline(u, string, iostat)
-		ln = ln + 1
+		ln = ln + 1                           ! line number
 		string = indent(string, ln, args%spt) ! convert spaces to tabs
-		string = space(string, ln) ! remove double spaces
-		str = char(string) ! necessary as stdlib strings cannot currently use write with fmt needed to strip the leading space
+		string = space(string, ln)            ! remove double spaces
+		str = char(string)                    ! necessary as stdlib strings cannot currently use write with fmt needed to strip the leading space
 		write(*,'(a)') str
 	end do
 
