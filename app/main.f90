@@ -1,5 +1,8 @@
 program main
 
+	! NOTE - this is probably broken after I made the change to be more fortran compactable.
+
+
 	use utils
 	use stdlib_string_type
 	use stdlib_error, only: error_stop
